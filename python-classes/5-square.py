@@ -48,9 +48,15 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """prints the a square of # in an are of size"""
-        for i in range(self.__size):
-            for j in range (self.__size):
-                print("#",end="")
+        """Print the square with the '#' character.
+
+        If size is 0, print an empty line.
+        """
+        if self.__size == 0:
             print()
-    
+            return
+
+        for _ in range(self.__size):
+            for _ in range(self.__size):
+                print("#", end="")
+            print()
