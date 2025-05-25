@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""This module defines a Square class with size validation and area computation."""
+"""This module defines a Square class.
 
+It includes size validation and a method to compute area.
+"""
 
 class Square:
     """Represents a square."""
