@@ -22,5 +22,11 @@ class Square:
 
     """a function that calculate the are of a square"""
     def area(self):
-        return self.size * self.size
+        """Returns the area of the square.
+
+        Returns:
+            int: The area (size squared).
+        """
+        
+        return self.__size ** 2
     
