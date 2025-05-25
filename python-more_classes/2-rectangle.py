@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a Rectangle class with width and height."""
+"""This module defines a Rectangle class with area and perimeter methods."""
 
 
 class Rectangle:
@@ -66,22 +66,21 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
-         """Get the area of the rectangle.
+        """Return the area of the rectangle.
 
         Returns:
-            int: The area of the rectangle.
+            int: Area calculated as width * height.
         """
         return self.__width * self.__height
 
     def perimeter(self):
-         """Get the perimeter of the rectangle.
+        """Return the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle.
+            int: Perimeter = 2 * (width + height), or 0 if any side is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
-
+        return 2 * (self.__width + self.__height)
