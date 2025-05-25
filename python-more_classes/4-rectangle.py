@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This module defines a Rectangle class with area, perimeter, and string representations."""
+"""This module defines a Rectangle class.
+
+It includes area, perimeter, and string representations.
+"""
 
 
 class Rectangle:
