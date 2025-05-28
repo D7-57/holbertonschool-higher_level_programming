@@ -30,3 +30,6 @@
 [Exception] area() is not implemented
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("height", 42)
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
