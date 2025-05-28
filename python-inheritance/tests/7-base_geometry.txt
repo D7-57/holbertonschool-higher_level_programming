@@ -31,5 +31,43 @@
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("height", 42)
 >>> bg = BaseGeometry()
->>> bg.integer_validator()
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> try:
+...     bg.integer_validator("age", 1)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+
+>>> try:
+...     bg.integer_validator("age", "4")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
