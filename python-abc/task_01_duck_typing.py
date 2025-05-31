@@ -12,7 +12,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.radius = radius  # No double underscore to avoid name mangling
+        self.radius = radius
 
     def area(self):
         return math.pi * self.radius ** 2
