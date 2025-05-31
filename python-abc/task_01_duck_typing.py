@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import math
 
 class Shape(ABC):
     @abstractmethod
@@ -11,13 +12,13 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = radius  # No double underscore to avoid name mangling
 
     def area(self):
-        return round(3.14 * self.radius ** 2, 2)
+        return math.pi * self.radius ** 2
 
     def perimeter(self):
-        return round(2 * 3.14 * self.radius, 2)
+        return 2 * math.pi * self.radius
 
 class Rectangle(Shape):
     def __init__(self, width, height):
