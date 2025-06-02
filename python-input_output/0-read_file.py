@@ -4,7 +4,7 @@
 
 def read_file(filename=""):
     """function take one argument the file path and print the content """
-    with open(filename) as f:
+        with open(filename, "r", encoding="utf-8") as f:
         contetn = f.read()
         print(contetn)
         f.seek(0)
