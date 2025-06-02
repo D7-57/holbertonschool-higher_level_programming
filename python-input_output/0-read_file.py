@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""a function thats allow us to choose a file path and print the content"""
+"""Module that defines a function to read and print a file content."""
 
 
 def read_file(filename=""):
-    """function take one argument the file path and print the content """
-        with open(filename) as f:
-        contetn = f.read()
-        print(contetn)
-        f.seek(0)
+    """Reads a UTF-8 text file and prints its content to stdout."""
+    with open(filename, "r", encoding="utf-8") as f:
+        content = f.read()
+        print(content, end="")
