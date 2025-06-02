@@ -3,6 +3,12 @@
 
 
 def write_file(filename="", text=""):
-    """write a UTF-8 text file and overwrite its content."""
+    """write a UTF-8 text file and overwrite its content.
+
+    args: filename is the filepath, and text represent the string to write
+
+    returns the number of character to be written
+    """
     with open(filename, "w", encoding="utf-8") as f:
-        f.write(text)
+        txt = text
+        return f.write(txt)
