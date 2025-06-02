@@ -5,4 +5,5 @@
 def read_file(filename=""):
     """function take one argument the file path and print the content """
     with open(filename) as f:
-        print(f.read())
+        contetn = f.read()
+        print(contetn)
