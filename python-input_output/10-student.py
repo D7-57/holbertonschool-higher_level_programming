@@ -11,13 +11,13 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, list=[]):
+    def to_json(self, list=[0]):
         """Return a dictionary representation of the Student
 
          with specified items to return
          """
         OriginalDict = self.__dict__
-        if len(list) == 0:
+        if list == [0]:
             """if empty return all"""
             return OriginalDict
         else:
