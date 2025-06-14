@@ -18,21 +18,21 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps(data).encode())
+            self.wfile.write(json.dumps(data, separators=(',', ':')).encode())
 
         elif self.path == "/status":
             status = {"status": "OK"}
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps(status).encode())
+            self.wfile.write(json.dumps(status, separators=(',', ':')).encode())
 
         else:
             self.send_response(404)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             error = {"error": "Endpoint not found"}
-            self.wfile.write(json.dumps(error).encode())
+            self.wfile.write(json.dumps(error, separators=(',', ':')).encode())
 
 if __name__ == "__main__":
     with socketserver.TCPServer(("", PORT), SimpleAPIHandler) as httpd:
