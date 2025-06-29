@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Create the states table in a given database using SQLAlchemy and the State model"""
+"""Create the states table in a given database using SQLAlchemy"""
 
 import sys
 from model_state import Base, State
