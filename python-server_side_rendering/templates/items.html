@@ -8,15 +8,16 @@
 
     <h1>Items List</h1>
     
+    {% if items %}
     <ul>
         {% for item in items %}
             <li>{{ item }}</li>
         {% endfor %}
     </ul>
-
-    {% if not items %}
-        <p>no items to show</p>
+    {% else %}
+        <p>No items to show</p>
     {% endif %}
+
 
     {% include 'footer.html' %}
 </body>
